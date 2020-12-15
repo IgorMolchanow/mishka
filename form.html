@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗФорма заказа</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header__contaner">
+            <div class="page-header__logo-wrapper">
+                <a class="logo" href="index.html" aria-label="Переход на главную страницу магазина Мишка">
+                    <img class="logo__image" src="" alt="Логотип магазина Мишка">
+                </a>
+            </div>
+            <nav class="page-header__main-nav main-nav main-nav--opened main-nav--nojs">
+                <button class="main-nav__toogle" type="button">Открыть меня</button>
+                <div class="main-nav__nav-wrapper main-nav__nav-wrapper--site-nav">
+                    <ul class="main-nav__list main-nav__list--site-nav">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="catalog.html">
+                                <span class="mai-nav__link-text"> Каталог товаров</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item main-nav__item--active">
+                            <a class="main-nav__link main-nav__link--active" href="form.html">
+                                <span class="main-nav__link-text main-nav__link-text--active">Вязание на заказ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-nav__nav-wrapper main-nav__nav-wrapper--user-nav">
+                    <ul class="main-nav__list main-nav__list--user-nav">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">
+                                <svg class="main-nav__image main-nav__image--search" width="18" height="18">
+                                </svg>
+                                <span class="visually-hidden"> Поиск по сайту</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">
+                                <svg class="main-nav__image main-nav__image--cart"></svg>
+                                <span class="main-nav__link-text">Корзина пока пуста</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-nav__nav-wrapper main-nav__nav-wrapper--special">
+                    <ul class="main-nav__list main-nav__list--special">
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">
+                                <span class="main-nav__link-text">>Новые поступления</span>
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a class="main-nav__link" href="#">
+                                <span class="main-nav__text">Распродажа</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-nav__nav-wrapper main-nav__nav-wrapper--delivery">
+                    <p class="main-nav__delivery">Бесплатная доставка по всей России</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="page-inner">
+        <div class="page-inner__container">
+            <h1 class="page-inner__title">Вязание на заказ</h1>
+        </div>
+        <section class="work-order">
+            <div class="work-order__container">
+                <h2 class="visually-hidden">Заказ на выполнение работы</h2>
+                <p class="work-order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+                    форму заказа и мы свяжемся с вами, чтобы уточнить
+                    детали</p>
+            </div>
+            <form action="https://echo.htmlacademy.ru/courses" method="POST">
+                <label for id="type">Тип</label>
+                <input type="radio" name="type" id="type" value="Аксессуар для интерьера">
+                <input type="radio" name="type" id="type" value="Детская игрушка">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
