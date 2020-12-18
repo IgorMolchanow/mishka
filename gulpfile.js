@@ -9,5 +9,8 @@ gulp.task("sass-compile", function () {
   .pipe(sourcemaps.init())
   .pipe(sass().on("error", sass.logError))
   .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('./css/'))
+  .pipe(gulp.dest('./source/css/'))
+})
+gulp.task("watch",function(){
+  gulp.watch('./source/sass/**/*.scss', gulp.series("sass-compile"))
 })
