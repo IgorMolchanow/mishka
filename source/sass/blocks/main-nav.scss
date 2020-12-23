@@ -1,0 +1,3 @@
+.main-nav__list--site-nav .main-nav__link {
+  @include font-options($font-bold, 15px, 24px, green);
+}
