@@ -1,3 +1,4 @@
-body {
-  background: rgb(255, 0, 157);
-}
+@import "general/variables";
+@import "general/fonts";
+@import "blocks/site-wrapper";
+@import "blocks/page-header";

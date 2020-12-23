@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "OpenSans-regular";
+  src: local("OpenSans"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "OpenSans-bold";
+  src: local("OpenSans"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; }
+
+.site-wrapper {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9); }
+
+.page-header {
+  background-color: #ffffff; }
+  .page-header--index {
+    background-color: #f9f9f9; }
+
+/*# sourceMappingURL=style.css.map */
