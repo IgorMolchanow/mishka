@@ -1,3 +1,11 @@
+.main-nav__nav-wrapper {
+  &--site-nav {
+    background-color: $bg-color-base;
+  }
+  &--user-nav {
+    background-color: $bg-color-base;
+  }
+}
 .main-nav__list--site-nav .main-nav__link {
-  @include font-options($font-bold, 15px, 24px, green);
+  @include font-options($font-bold, 15px, 24px, $text-title-color);
 }

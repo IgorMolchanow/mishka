@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  @include font-options();
+  font-weight: normal;
+  background-color: $bg-color-base;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

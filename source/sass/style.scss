@@ -1,5 +1,8 @@
 @import "general/variables";
 @import "general/fonts";
+@import "general/mixins.scss";
+@import "general/global.scss";
 @import "blocks/site-wrapper";
 @import "blocks/page-header";
 @import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";

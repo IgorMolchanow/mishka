@@ -1,0 +1,21 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@mixin font-options(
+  $family: $font-regular,
+  $size: 15px,
+  $line: 24px,
+  $font-color: $text-base-color
+) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line;
+  color: $font-color;
+}
