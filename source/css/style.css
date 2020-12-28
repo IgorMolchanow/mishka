@@ -1,3 +1,14 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @font-face {
   font-family: "OpenSans-regular";
   src: local("OpenSans"), url("/source/fonts/OpenSans-Regular.woff2") format("woff2"), url("/source/fonts/OpenSans-Regular.woff") format("woff");
@@ -12,17 +23,6 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 html {

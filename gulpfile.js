@@ -12,11 +12,13 @@ $.gulp.task('clean', function () {
 });
 
 $.gulp.task('compile-scss', () => {
-  return $.gulp.src('./source/scss/**/*.scss')
+  return $.gulp.src('./source/scss/style.scss')
+    .pipe($.gp.sourcemaps.init())
     .pipe($.gp.sass({
       includePaths: ['./source/scss/**/*.scss'],
       outputStyle: 'expanded'
     }).on('error', $.gp.sass.logError))
+    .pipe($.gp.sourcemaps.write())
     .pipe($.gp.autoprefixer({
       browsers: ['last 4 version']
     }))
