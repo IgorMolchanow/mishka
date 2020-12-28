@@ -6,6 +6,7 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const server = require("browser-sync").create();
+const rename = require("gulp-rename");
 
 gulp.task("css", function () {
   return gulp.src('./source/sass/style.scss')
