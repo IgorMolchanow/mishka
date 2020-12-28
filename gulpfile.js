@@ -11,6 +11,19 @@ $.gulp.task('clean', function () {
   ]);
 });
 
+$.gulp.task('browser-sync', function(done) {
+  $.browserSync.init({
+    server: {
+      baseDir: './source'
+    },
+    notify: false
+  });
+
+  $.browserSync.watch('source/').on('change', $.browserSync.reload);
+
+  done()
+});
+
 $.gulp.task('compile-scss', () => {
   return $.gulp.src('./source/scss/*.scss')
     .pipe($.gp.sourcemaps.init())
@@ -53,11 +66,7 @@ $.gulp.task('img', function () {
 $.gulp.task('watch', function () {
   $.gulp.watch('./source/scss/**/*.scss', $.gulp.series('compile-scss'));
 });
-$.gulp.task('serve', function () {
-  $.browserSync.init({
-    server: './source'
-  });
-});
+
 $.gulp.task('default', $.gulp.series(
   'clean',
   'compile-scss',
@@ -69,7 +78,7 @@ $.gulp.task('default', $.gulp.series(
 
   $.gulp.parallel(
     'watch',
-    'serve'
+    'browser-sync'
   )
 ));
 
