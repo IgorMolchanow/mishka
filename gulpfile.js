@@ -1,37 +1,80 @@
-"use strict";
+global.$ = {
+  gulp: require('gulp'),
+  del: require('del'),
+  browserSync: require('browser-sync').create(),
+  gp: require('gulp-load-plugins')(),
+};
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-
-gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
+$.gulp.task('clean', function () {
+  return $.del([
+    'source/build'
+  ]);
 });
 
-gulp.task("server", function () {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+$.gulp.task('compile-scss', () => {
+  return $.gulp.src('./source/scss/**/*.scss')
+    .pipe($.gp.sass({
+      includePaths: ['./source/scss/**/*.scss'],
+      outputStyle: 'expanded'
+    }).on('error', $.gp.sass.logError))
+    .pipe($.gp.autoprefixer({
+      browsers: ['last 4 version']
+    }))
+    .pipe($.gulp.dest('./source/css/'))
+    .pipe($.browserSync.reload({
+      stream: true
+    }));
+});
+
+$.gulp.task('template', function () {
+  return $.gulp.src('./source/**/*.html')
+    .pipe($.gulp.dest('./source/build/'))
+    .pipe($.browserSync.reload({
+      stream: true
+    }));
+});
+
+$.gulp.task('js', function () {
+  return $.gulp.src('source/js/*.js')
+    .pipe($.gulp.dest('source/build/js/'))
+});
+$.gulp.task('css', function () {
+  return $.gulp.src('source/css/*.css')
+    .pipe($.gulp.dest('source/build/css/'))
+});
+$.gulp.task('fonts', function () {
+  return $.gulp.src('source/fonts/*')
+    .pipe($.gulp.dest('source/build/fonts/'))
+});
+$.gulp.task('img', function () {
+  return $.gulp.src('source/img/*')
+    .pipe($.gulp.dest('source/build/img/'))
+});
+
+$.gulp.task('watch', function () {
+  $.gulp.watch('./source/scss/**/*.scss', $.gulp.series('compile-scss'));
+  $.gulp.watch('./source/**/*', $.gulp.series('template'));
+});
+$.gulp.task('serve', function () {
+  $.browserSync.init({
+    server: './source'
   });
-
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
 });
+$.gulp.task('default', $.gulp.series(
+  'clean',
+  'template',
+  'compile-scss',
+  'js',
+  'css',
+  'fonts',
+  'img',
 
-gulp.task("start", gulp.series("css", "server"));
+  $.gulp.parallel(
+    'watch',
+    'serve'
+  )
+));
+
+
+
+

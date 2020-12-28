@@ -6,6 +6,8 @@
 *.pdf
 *.psd
 *.sublime*
+/source/build
+package-lock.json
 /build
 node_modules/
 npm-debug.*
