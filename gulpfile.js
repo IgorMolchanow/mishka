@@ -12,7 +12,7 @@ $.gulp.task('clean', function () {
 });
 
 $.gulp.task('compile-scss', () => {
-  return $.gulp.src('./source/scss/style.scss')
+  return $.gulp.src('./source/scss/*.scss')
     .pipe($.gp.sourcemaps.init())
     .pipe($.gp.sass({
       includePaths: ['./source/scss/**/*.scss'],
