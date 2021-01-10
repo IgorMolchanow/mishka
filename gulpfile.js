@@ -11,7 +11,6 @@ const server = require("browser-sync").create();
 const imagemin = require("gulp-imagemin");
 const imageminJpegtran = require("imagemin-jpegtran");
 const webp = require("gulp-webp");
-const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
 const posthtml = require("gulp-posthtml");
@@ -27,8 +26,7 @@ gulp.task("css", function () {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
+    .pipe(rename("style.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
