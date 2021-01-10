@@ -1,0 +1,13 @@
+.categories__item {
+  position: relative;
+
+  &:nth-child(odd),
+  &:nth-child(odd)::before {
+    background-color: $bg-color-green-light;
+  }
+
+  &:nth-child(even),
+  &:nth-child(even)::before {
+    background-color: $bg-color-green-dark;
+  }
+}
