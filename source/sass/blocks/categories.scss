@@ -1,3 +1,21 @@
+.categories-title {
+  @include font-options($font-bold, 27px, 30px, $text-title-color);
+}
+.categories__link {
+  @include font-options($font-bold, 19px, 24px, $text-second-color);
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 103px;
+  margin: 0;
+  padding: 25px;
+  padding-left: 30px;
+  padding-right: 130px;
+
+  font-weight: normal;
+  text-transform: none;
+}
 .categories__item {
   position: relative;
 

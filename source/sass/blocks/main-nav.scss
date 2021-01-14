@@ -6,6 +6,13 @@
     background-color: $bg-color-base;
   }
 }
-.main-nav__list--site-nav .main-nav__link {
+.main-nav__link {
+  @include font-options($font-bold, 17px, 24px, $text-title-color);
+}
+.special-item {
   @include font-options($font-bold, 15px, 24px, $text-title-color);
+}
+.main-nav__delivery {
+  @include font-options($font-regular, 15px, 24px, $text-base-color);
+  text-align: right;
 }
