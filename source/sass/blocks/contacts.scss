@@ -1,0 +1,6 @@
+.contacts-info__title {
+  @include font-options($font-bold, 18px, 30px, $text-title-color);
+}
+.contacts-info__content {
+  @include font-options($font-regular, 15px, 30px, $text-base-color);
+}
