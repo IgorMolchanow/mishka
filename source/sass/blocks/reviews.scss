@@ -1,0 +1,12 @@
+.reviews__title {
+  @include font-options($font-bold, 25px, 30px, $text-title-color);
+}
+.reviews__text {
+  @include font-options($font-regular, 15px, 30px, $text-base-color);
+}
+.reviews__author-name {
+  @include font-options($font-bold, 17px, 24px, $text-title-color);
+}
+.reviews__author-nickname {
+  @include font-options($font-regular, 17px, 30px, $text-base-color);
+}
