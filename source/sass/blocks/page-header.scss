@@ -1,6 +1,29 @@
 .page-header {
   background-color: $bg-color-base;
-  &--index {
-    background-color: $bg-color-gray2;
+  @include tablet-width() {
+    background-color: $bg-color-gray;
   }
+}
+.page-header__container {
+  @include container($mobile-width, $mobile-padding, 0, 0);
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 0, 0);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -47px;
+  }
+  @include desktop-width() {
+    @include container($desktop-width, 0, 0, 0);
+    max-width: 100%;
+    margin: -72px 0 0;
+  }
+}
+.page-header__logo-wrapper {
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 17px;
 }

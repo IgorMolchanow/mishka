@@ -8,6 +8,34 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+@mixin container(
+  $container-width: $mobile-width,
+  $container-padding: $mobile-padding,
+  $container-padding-top: 0,
+  $container-padding-bottom: 0
+) {
+  min-width: $container-width;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: $container-padding-top $container-padding $container-padding-bottom;
+}
+@mixin mobile-width-only() {
+  @media (max-width: $mobile-width-only) {
+    @content;
+  }
+}
+
+@mixin tablet-width() {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-width() {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
 @mixin font-options(
   $family: $font-regular,
   $size: 15px,

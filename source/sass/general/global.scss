@@ -2,6 +2,9 @@ html {
   box-sizing: border-box;
 }
 body {
+  min-width: $mobile-width;
+  margin: 0;
+  padding: 0;
   @include font-options();
   font-weight: normal;
   background-color: $bg-color-base;

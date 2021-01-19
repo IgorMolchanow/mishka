@@ -1,3 +1,19 @@
+.main-nav {
+  position: relative;
+
+  background-color: transparent;
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 5;
+
+    width: 100%;
+    min-height: 89px;
+  }
+}
 .main-nav__nav-wrapper {
   &--site-nav {
     background-color: $bg-color-base;
@@ -14,5 +30,4 @@
 }
 .main-nav__delivery {
   @include font-options($font-regular, 15px, 24px, $text-base-color);
-  text-align: right;
 }
