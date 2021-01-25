@@ -1,5 +1,25 @@
+.categories__container {
+  @include container($mobile-width, $mobile-padding, 0, 0);
+  background-color: $bg-color-categories;
+  // background-image: url("../img/hero-mobile@1x.jpg");
+  background-position: center -18px;
+  background-repeat: no-repeat;
+  background-size: 575px 375px;
+  height: 488px;
+  @include tablet-width() {
+    @include container($tablet-width, 0, 0, 0);
+    // background-image: url("../img/hero-tablet@1x.jpg");
+  }
+}
 .categories-title {
   @include font-options($font-bold, 27px, 30px, $text-title-color);
+  height: 283px;
+  padding: 71px $mobile-padding 122px;
+
+  background-color: transparent;
+}
+.categories-list {
+  height: 205px;
 }
 .categories__link {
   @include font-options($font-bold, 19px, 24px, $text-second-color);

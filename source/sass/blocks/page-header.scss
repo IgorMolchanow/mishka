@@ -1,29 +1,56 @@
-.page-header {
-  background-color: $bg-color-base;
-  @include tablet-width() {
-    background-color: $bg-color-gray;
-  }
-}
+// .page-header {
+//   background-color: $bg-color-base;
+
+//   @include tablet-width() {
+//     background-color: $bg-color-gray;
+//     &--index {
+//       background-color: $bg-color-gray2;
+//     }
+//   }
+// }
 .page-header__container {
+  background: rgba(45, 59, 255, 0.2);
+  box-shadow: 0 0 0 0.1px rgb(45, 255, 220);
   @include container($mobile-width, $mobile-padding, 0, 0);
+  display: flex;
+  flex-direction: column;
+  height: 395px;
   @include tablet-width() {
     @include container($tablet-width, $tablet-padding, 0, 0);
+    height: 89px;
     position: relative;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: -47px;
+    // flex-wrap: wrap;
+    min-height: 89px;
+    // margin-top: -47px;
   }
   @include desktop-width() {
     @include container($desktop-width, 0, 0, 0);
     max-width: 100%;
-    margin: -72px 0 0;
+    min-height: 89px;
+    // margin: -72px 0 0;
   }
 }
 .page-header__logo-wrapper {
-  height: 80px;
+  background: rgba(243, 16, 224, 0.2);
+  box-shadow: 0 0 0 0.1px rgb(45, 255, 220);
+  height: 89px;
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 22px 0 17px;
+}
+.page-header__main-nav {
+  background: rgba(31, 16, 243, 0.2);
+  box-shadow: 0 0 0 0.1px rgb(45, 255, 220);
+  height: 315px;
+  @include tablet-width() {
+    height: 89px;
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 5;
+    width: 100%;
+  }
 }

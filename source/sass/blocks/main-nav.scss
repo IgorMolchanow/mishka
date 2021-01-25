@@ -1,22 +1,13 @@
-.main-nav {
-  position: relative;
-
-  background-color: transparent;
-
-  @include tablet-width() {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    z-index: 5;
-
-    width: 100%;
-    min-height: 89px;
-  }
-}
 .main-nav__nav-wrapper {
+  @include tablet-width() {
+    width: 50%;
+  }
   &--site-nav {
-    background-color: $bg-color-base;
+    @include desktop-width() {
+      order: -1;
+      min-height: 89px;
+      background-color: $bg-color-base;
+    }
   }
   &--user-nav {
     background-color: $bg-color-base;
@@ -30,4 +21,5 @@
 }
 .main-nav__delivery {
   @include font-options($font-regular, 15px, 24px, $text-base-color);
+  display: none;
 }
