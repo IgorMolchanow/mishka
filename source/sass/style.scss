@@ -1,6 +1,7 @@
+@import "general/normalize/import-now";
 @import "general/variables";
 @import "general/fonts";
-@import "general/mixins";
+@import "general/mixins.scss";
 @import "general/global";
 @import "blocks/site-wrapper";
 @import "blocks/page-header";
