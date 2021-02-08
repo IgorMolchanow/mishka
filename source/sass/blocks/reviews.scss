@@ -1,5 +1,49 @@
+.reviews__container {
+  @include container($mobile-width, $mobile-padding, 8px, 51px);
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 77px, 131px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+    background-position: 0 0;
+  }
+  @include desktop-width() {
+    @include container($desktop-width, $desktop-padding, 71px, 185px);
+
+    padding-left: 225px;
+
+    background-position: $desktop-padding 0;
+  }
+}
 .reviews__title {
   @include font-options($font-bold, 25px, 30px, $text-title-color);
+  margin-bottom: 26px;
+  @include tablet-width() {
+    @include font-options($font-bold, 43px, 50px, $text-title-color);
+    order: 0;
+    width: 50%;
+    margin: 0 0 0 -5px;
+  }
+
+  @include desktop-width() {
+    margin-left: -4px;
+  }
+}
+.reviews__list {
+  padding-bottom: 38px;
+
+  @include tablet-width() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    order: 2;
+    margin: 45px 0 0;
+    padding: 0;
+  }
 }
 .reviews__text {
   @include font-options($font-regular, 15px, 30px, $text-base-color);

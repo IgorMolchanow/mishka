@@ -1,6 +1,40 @@
+.features-container {
+  @include container($mobile-width, $mobile-padding, 30px, 25px);
+  @include tablet-width() {
+    @include container($tablet-width, $tablet-padding, 49px, 28px);
+  }
+  @include desktop-width() {
+    @include container($desktop-width, 225px, 59px, 34px);
+  }
+}
 .features__title {
   @include font-options($font-bold, 25px, 30px, $text-title-color);
+  margin-bottom: 30px;
+  @include tablet-width() {
+    @include font-options($font-bold, 43px, 50px, $text-title-color);
+    margin-bottom: 47px;
+  }
+}
+.features__list {
+  @include list-style-none();
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  @include tablet-width() {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include desktop-width() {
+    width: 700px;
+  }
 }
 .features__item {
   @include font-options($font-bold, 17px, 20px, $text-title-color);
+  padding: 55px 0 28px;
+  @include tablet-width() {
+    @include font-options($font-bold, 20px, 22px, $text-title-color);
+    padding: 56px, 35px, 56px, 0;
+    width: 50%;
+  }
 }
