@@ -47,10 +47,47 @@
 }
 .reviews__text {
   @include font-options($font-regular, 15px, 30px, $text-base-color);
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+
+    margin-bottom: 60px;
+  }
+
+  @include desktop-width() {
+    padding-right: 100px;
+    margin-bottom: 40px;
+  }
 }
+
 .reviews__author-name {
-  @include font-options($font-bold, 17px, 24px, $text-title-color);
+  @include font-options($font-bold, 17px, 20px, $text-title-color);
+
+  display: block;
+
+  font-style: normal;
+
+  @include tablet-width() {
+    @include font-options($font-bold, 18px, 24px, $text-title-color);
+
+    width: 70%;
+  }
+
+  @include desktop-width() {
+    @include font-options($font-bold, 17px, 24px, $text-title-color);
+  }
 }
 .reviews__author-nickname {
-  @include font-options($font-regular, 17px, 30px, $text-base-color);
+  @include font-options($font-regular, 17px, 20px, $text-base-color);
+
+  display: block;
+  padding-top: 10px;
+
+  @include tablet-width() {
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+    padding-top: 3px;
+  }
 }

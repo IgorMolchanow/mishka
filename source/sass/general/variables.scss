@@ -6,25 +6,54 @@ $tablet-padding: 50px;
 $desktop-padding: 50px;
 $mobile-width-only: 767px;
 $retina-dppx: 1.5dppx;
-// Шрифты
+
+/*  ШРИФТЫ  */
 $font-regular: "OpenSans-regular", "Arial", sans-serif;
 $font-bold: "OpenSans-bold", "Arial", sans-serif;
-// Задний Фон
-$bg-color-base: #ffffff;
-$bg-color-gray: #f1f1f1;
-$bg-color-gray2: #f9f9f9;
-$bg-color-green-light: #63d1bb;
-$bg-color-green-dark: #56c3b2;
-$bg-color-photo-gray: #ebebeb;
-$bg-color-categories: #fafafa;
-// Цвета текста
+
+/*  ЦВЕТА  */
+//  Текст
 $text-base-color: #444444;
 $text-second-color: #ffffff;
 $text-title-color: #000000;
 $text-form-legend-color: #63d1bb;
-// Цвета
+
+//  кнопки
 $menu-button-color: #221f1f;
 $btn-base-color: #ffffff;
 $btn-base-color-hover: #444444;
 $btn-text-color-hover: #ffffff;
 $btn-border-base-color: #444444;
+
+//  ссылки
+$link-border-color: #62d1ba;
+$link-text-color-hover: #46c1ae;
+$link-border-color-hover: #46c1ae;
+$social-color-base: #221f1f;
+$social-color-hover: #46c1ae;
+$copyright-image-color-base: #63d1bb;
+$copyright-image-color-hover: #46c1ae;
+$cart-icon-color-base: #221f1f;
+$cart-icon-color-hover: #63d1bb;
+
+//  Фон
+$bg-color-base: #ffffff;
+$bg-color-gray: #f1f1f1;
+$bg-color-gray-2: #f9f9f9;
+$photo-bg-color-gray: #ebebeb;
+$bg-color-categories: #fafafa;
+$bg-color-green-light: #63d1bb;
+$bg-color-green-dark: #56c3b2;
+
+//  Рамки
+$border-color-gray: #ececec;
+$border-color-gray-2: #e5e5e5;
+$border-color-gray-3: #ededed;
+$border-color-gray-4: #c7c7c7;
+$input-border-base-color: #000000;
+$input-border-green-color: #62d1ba;
+$textarea-border-base-color: #444444;
+$border-color-input-error: #ff8282;
+
+//  Тени
+$shadow-base-color: #000000;

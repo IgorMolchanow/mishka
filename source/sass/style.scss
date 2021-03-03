@@ -1,9 +1,10 @@
-@import "general/normalize/import-now";
-@import "general/variables";
-@import "general/fonts";
+@import "general/normalize/import-now.scss";
+@import "general/variables.scss";
+@import "general/fonts.scss";
 @import "general/mixins.scss";
-@import "general/global";
-@import "blocks/site-wrapper";
+@import "general/global.scss";
+@import "blocks/site-wrapper.scss";
+@import "blocks/page-main.scss";
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/page-footer";
