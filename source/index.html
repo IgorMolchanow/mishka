@@ -113,22 +113,38 @@
           <p class="week-product__description">
             Экологически чистая пряжа, ручная работа, доступны в шести расцветках и трех размерах.
           </p>
-          <table class="week-product__info">
-            <tr class="week-product__property">
-              <td class="week-product__info-title week-product__data">Цвет:</td>
-              <td class="week-product__info-value week-product__data"><q>Тиффани</q>/серый</td>
-            </tr>
-            <tr>
-              <td class="week-product__info-title week-product__data">Диаметр</td>
-              <td class="week-product__info-value week-product__data">25см</td>
-            </tr>
-            <tr>
-              <td class="week-product__info-title week-product__data">Высота</td>
-              <td class="week-product__info-value week-product__data">15см</td>
-            </tr>
-          </table>
-          <b class="week-product__price-title"><span class="week-product__price">Цена 900р</span></b>
-          <button class="week-product__button" type="button">Заказать</button>
+          <div class="week-product__info-wrapper">
+            <table class="week-product__info">
+              <tr class="week-product__property">
+                <td class="week-product__info-title week-product__data">Цвет:</td>
+                <td class="week-product__info-value week-product__data"><q>Тиффани</q>/серый</td>
+              </tr>
+              <tr>
+                <td class="week-product__info-title week-product__data">Диаметр</td>
+                <td class="week-product__info-value week-product__data">25см</td>
+              </tr>
+              <tr>
+                <td class="week-product__info-title week-product__data">Высота</td>
+                <td class="week-product__info-value week-product__data">15см</td>
+              </tr>
+            </table>
+            <b class="week-product__price-title"><span class="week-product__price">Цена 900р</span></b>
+            <a class="week-product__button  button  add-cart-js" href="add-cart.html">Заказать</a>
+          </div>
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img class="week-product__photo" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+              width="260" height="315" alt="Фотография вязаных корзинок.">
+          </picture>
         </div>
       </section>
       <section class="features">

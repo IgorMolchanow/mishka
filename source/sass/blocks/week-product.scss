@@ -1,3 +1,6 @@
+.week-product {
+  @include decorative-wavy-border-line();
+}
 .week-product__container {
   @include container($mobile-width, $mobile-padding, 28px, 42px);
 
@@ -39,13 +42,24 @@
 
   font-weight: normal;
   text-transform: uppercase;
+  @include tablet-width() {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 25%;
+    margin: 10px 0 0;
+    @include font-options($font-bold, 17px, 17px, $bg-color-green-light);
+    text-align: center;
+  }
   @include desktop-width() {
     order: -1;
+    width: 171px;
+    margin-top: 14px;
   }
 }
 .week-product__intro {
-  @include font-options($font-bold, 25px, 30px, $text-title-color);
-  order: 0;
+  @include regular-title();
+  order: -1;
   display: block;
 
   @include desktop-width() {
@@ -53,11 +67,75 @@
     margin: 0;
   }
 }
-.week-product__description {
-  @include font-options($font-regular, 15px, 25px, $text-base-color);
+.week-product__info-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet-width() {
+    width: 50%;
+    padding-right: 45px;
+  }
+
+  @include desktop-width() {
+    padding: 159px 58px 0 175px;
+  }
 }
+.week-product__description {
+  margin: 0;
+  margin-bottom: 16px;
+
+  @include tablet-width() {
+    margin-bottom: 36px;
+
+    @include font-options($font-regular, 17px, 30px, $text-base-color);
+  }
+
+  @include desktop-width() {
+    margin-bottom: 49px;
+  }
+}
+
 .week-product__info {
-  @include font-options($font-regular, 15px, 20px, $text-base-color);
+  width: 100%;
+  margin-bottom: 365px;
+
+  @include tablet-width() {
+    margin-bottom: auto;
+
+    @include font-options($font-regular, 15px, 20px, $text-base-color);
+  }
+}
+.week-product__property {
+  display: flex;
+  flex-direction: row;
+}
+.week-product__data {
+  display: inline-block;
+  vertical-align: top;
+  min-height: 40px;
+  padding: 7px 0 8px;
+
+  border-bottom: 1px solid $border-color-gray;
+
+  @include tablet-width() {
+    min-height: 39px;
+    padding-top: 9px;
+  }
+
+  @include tablet-width() {
+    min-height: 40px;
+    padding-top: 7px;
+  }
+}
+.week-product__info-title {
+  flex-shrink: 0;
+
+  width: 36.9%;
+  padding-right: 20px;
+
+  @include tablet-width() {
+    width: 33.6%;
+  }
 }
 .week-product__price-title {
   @include font-options($font-bold, 17px, 24px, $text-base-color);
