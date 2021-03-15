@@ -137,6 +137,48 @@
     width: 33.6%;
   }
 }
+.week-product__info-value {
+  flex-grow: 1;
+}
 .week-product__price-title {
-  @include font-options($font-bold, 17px, 24px, $text-base-color);
+  @include little-title();
+
+  display: block;
+  margin-bottom: 26px;
+
+  color: $text-base-color;
+  text-align: center;
+
+  @include tablet-width() {
+    margin-bottom: 35px;
+  }
+
+  @include desktop-width() {
+    margin-bottom: 34px;
+  }
+}
+.week-product__price {
+  display: inline-block;
+}
+.week-product__photo {
+  display: block;
+
+  width: 260px;
+  height: 315px;
+  margin: 0 auto;
+  margin-top: -441px;
+
+  background-color: $photo-bg-color-gray;
+
+  @include tablet-width() {
+    width: 333px;
+    height: 404px;
+    margin: 8px 0 0;
+  }
+
+  @include desktop-width() {
+    width: 525px;
+    height: 636px;
+    margin: 0;
+  }
 }
