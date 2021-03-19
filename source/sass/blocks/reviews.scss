@@ -19,10 +19,9 @@
   }
 }
 .reviews__title {
-  @include font-options($font-bold, 25px, 30px, $text-title-color);
+  @include regular-title();
   margin-bottom: 26px;
   @include tablet-width() {
-    @include font-options($font-bold, 43px, 50px, $text-title-color);
     order: 0;
     width: 50%;
     margin: 0 0 0 -5px;
@@ -43,6 +42,15 @@
     order: 2;
     margin: 45px 0 0;
     padding: 0;
+  }
+}
+.reviews__item {
+  display: none;
+  margin: 0 0 34px;
+  padding: 0;
+
+  &--active {
+    display: block;
   }
 }
 .reviews__text {
@@ -89,5 +97,93 @@
   @include tablet-width() {
     @include font-options($font-regular, 17px, 30px, $text-base-color);
     padding-top: 3px;
+  }
+}
+.reviews__toggles {
+  display: flex;
+  flex-direction: row;
+
+  @include tablet-width() {
+    margin-top: -54px;
+    margin-left: auto;
+
+    width: 175px;
+  }
+}
+.reviews__toggle {
+  position: relative;
+  flex-grow: 1;
+  display: block;
+  height: 52px;
+
+  background-color: transparent;
+  border: 1px solid $border-color-gray;
+  outline: none;
+  cursor: pointer;
+
+  &:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  &:focus {
+    @include focus();
+  }
+
+  &--prev:focus {
+    z-index: 10;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 26px;
+
+    background-repeat: no-repeat;
+    background-size: 50px 26px;
+    background-position: center center;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &--prev::after {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next::after {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    border: none;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+.reviews__button {
+  @include tablet-width() {
+    order: 1;
+    width: min-content;
+    min-width: 175px;
+    max-width: 40%;
+    height: min-content;
+    margin: 2px 0 0 auto;
+  }
+
+  @include desktop-width() {
+    margin: 9px 0 0 auto;
   }
 }

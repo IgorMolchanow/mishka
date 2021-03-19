@@ -165,21 +165,26 @@
                 <span class="reviews__author-nickname">@misssssssiskras</span>
               </cite>
             </blockquote>
-            <button class="reviews__toogle reviews__toogle--prev" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="reviews__toogle reviews__toogle--next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
-            <a class="reviews__button button" href="#">Написать</a>
+            <div class="reviews__toggles">
+              <button class="reviews__toggle reviews__toggle--prev" type="button">
+                <span class="visually-hidden">Предыдущий отзыв</span>
+              </button>
+              <button class="reviews__toggle reviews__toggle--next" type="button">
+                <span class="visually-hidden">Следующий отзыв</span>
+              </button>
+            </div>
           </div>
+          <a class="reviews__button button" href="#">Написать</a>
         </div>
-      </section>
-      <section class="contacts">
-        <!-- <h2 class="visually-hidden">Контакты и связь с нами</h2>
-        <section class="contacts__info contacts-info">
-          <h3 class="contacts-info__title">Контакты</h3>
-          <table class="contacts-info__content">
+  </div>
+  </section>
+  <section class="contacts">
+    <div class="contacts__container">
+      <h2 class="visually-hidden">Контакты и связь с нами</h2>
+      <section class="contacts__info contacts-info">
+        <h3 class="contacts-info__title">Контакты</h3>
+        <table class="contacts-info__content">
+          <tbody class="contacts-info__content-inner">
             <tr class="contacts-info__content--property">
               <td class="contacts-info__content-title contacts-info__data">e-mail</td>
               <td class="contacts-info__content-value contacts-info__data"><a class="contacts__link link"
@@ -191,45 +196,51 @@
                 Большая
                 Конюшенная,<br> д.19/8 офис 101</td>
             </tr>
-          </table> -->
-        <!-- </section>
-        <section class="contacts__map map"> -->
-        <!-- <h3 class="visually-hidden">Мы на карте</h3>
-          <img class="map__image" src="map.jpg" alt="Магазин Мишка на карте">
-        </section>
-        <a class="contacts__button button" href="#">Напишите нам</a> -->
+          </tbody>
+        </table>
       </section>
-    </main>
-    <footer class="page-footer">
-      <div class="page-footer__container">
-        <!-- <a class="page-footer__logo footer-logo" href="index.html" aria-label="Переход на главную страницу"></a>
-        <ul class="page-footer__social social">
-          <li class="social__item">
-            <a class="social__button social__button--instagram" href="#" aria-label="Мишка в Инстаграме">
-              <svg class="social__iamge social__image--instagram"></svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__button social__button--facebook" href="#" aria-label="Мишка в фейсбуке"> <svg
-                class="social__image social__image--fb"></svg>
-            </a>
-          </li>
-          <li class="social__item"><a class="social__button social__button--twitter" href="#"
-              aria-label="Мишка в Твиттере">
-              <svg class="social__image social__image--tw"></svg>
-            </a>
-          </li>
-        </ul>
-        <a class="page-footer__coopyright coopyright" href="htmlacademy.ru" aria-label="Сайт HTML Academy">
-          <div class="coopyright__container">
-            <span class="coopyright__intro">Разработано</span>
-            <div class="coopyright__logo">
-              <svg class="coopyright__image"></svg>
-            </div>
+      <section class="contacts__map map">
+        <h3 class="visually-hidden">Мы на карте</h3>
+        <picture>
+          <source media="(min-width: 1150px)" srcset="../img/map-desktop@1x.jpg">
+          <source media="(min-width: 768px)" srcset="../img/map-tablet@1x.jpg">
+          <img class="map__image" src="../img/map-mobile@1x.jpg" alt="Магазин Мишка на карте">
+        </picture>
+      </section>
+      <a class="contacts__button button" href="#">Напишите нам</a>
+    </div>
+  </section>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <a class="page-footer__logo footer-logo" href="index.html" aria-label="Переход на главную страницу"></a>
+      <ul class="page-footer__social social">
+        <li class="social__item">
+          <a class="social__button social__button--instagram" href="#" aria-label="Мишка в Инстаграме">
+            <svg class="social__iamge social__image--instagram"></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--facebook" href="#" aria-label="Мишка в фейсбуке"> <svg
+              class="social__image social__image--fb"></svg>
+          </a>
+        </li>
+        <li class="social__item"><a class="social__button social__button--twitter" href="#"
+            aria-label="Мишка в Твиттере">
+            <svg class="social__image social__image--tw"></svg>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__coopyright coopyright" href="htmlacademy.ru" aria-label="Сайт HTML Academy">
+        <div class="coopyright__container">
+          <span class="coopyright__intro">Разработано</span>
+          <div class="coopyright__logo">
+            <svg class="coopyright__image"></svg>
           </div>
-        </a> -->
-      </div>
-    </footer>
+        </div>
+      </a>
+    </div>
+  </footer>
   </div>
 </body>
 
