@@ -1,0 +1,44 @@
+.social {
+  @include list-style-none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social__item {
+  margin: 11px 10px;
+}
+
+.social__btn {
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  outline: none;
+  &:hover .social__image,
+  &:focus .social__image {
+    fill: $social-color-hover;
+  }
+  &:active .social__image {
+    fill: rgba($social-color-hover, 0.3);
+  }
+}
+.social__image {
+  fill: $social-color-base;
+  pointer-events: none;
+
+  &--instagram {
+    margin-top: 11px;
+    margin-left: 7px;
+  }
+
+  &--fb {
+    margin-top: 6px;
+    margin-left: 10px;
+  }
+
+  &--tw {
+    margin-top: 11px;
+    margin-left: 4px;
+  }
+}
