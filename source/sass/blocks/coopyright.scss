@@ -1,3 +1,64 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+  outline: none;
+
+  &:hover .copyright__image,
+  &:focus .copyright__image {
+    fill: $copyright-image-color-hover;
+  }
+
+  &:focus .copyright__container {
+    @include focus($copyright-image-color-hover, $bg-color-gray);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet-width() {
+    justify-content: flex-end;
+  }
+}
+.copyright__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  padding: 18px 39px 9px 37px;
+
+  outline: none;
+  border-top: 1px solid $border-color-gray-2;
+  pointer-events: none;
+
+  @include tablet-width() {
+    width: 184px;
+    padding: 0;
+
+    border: none;
+  }
+}
 .copyright__intro {
   @include font-options($font-bold, 19px, 18px, $text-title-color);
+
+  padding-right: 20px;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  padding-top: 3px;
+}
+
+.copyright__image {
+  width: 27px;
+  height: 34px;
+
+  fill: $copyright-image-color-base;
+  pointer-events: none;
 }
