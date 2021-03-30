@@ -191,31 +191,39 @@
     <div class="contacts__container">
       <h2 class="visually-hidden">Контакты и связь с нами</h2>
       <section class="contacts__info contacts-info">
-        <h3 class="contacts-info__title">Контакты</h3>
-        <table class="contacts-info__content">
-          <tbody class="contacts-info__content-inner">
-            <tr class="contacts-info__content--property">
-              <td class="contacts-info__content-title contacts-info__data">e-mail</td>
-              <td class="contacts-info__content-value contacts-info__data"><a class="contacts__link link"
-                  href="#">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr class="contacts-info__content--property">
-              <td class="contacts-info__content-title contacts-info__data">Адрес</td>
-              <td class="contacts-info__content-value contacts-info__data">г. Санкт-Петербург,<br> ул.
-                Большая
-                Конюшенная,<br> д.19/8 офис 101</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="contacts-info__container">
+          <h3 class="contacts-info__title">Контакты</h3>
+          <table class="contacts-info__content">
+            <tbody class="contacts-info__content-inner">
+              <tr class="contacts-info__content--property">
+                <td class="contacts-info__content-title contacts-info__data">e-mail</td>
+                <td class="contacts-info__content-value contacts-info__data">
+                  <a class="contacts__link link" href="#">info@mimimishkashop.ru</a>
+                </td>
+              </tr>
+              <tr class="contacts-info__content--property">
+                <td class="contacts-info__content-title contacts-info__data">Адрес</td>
+                <td class="contacts-info__content-value contacts-info__data">г. Санкт-Петербург,<br> ул.
+                  Большая
+                  Конюшенная,<br> д.19/8 офис 101</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
       <section class="contacts__map map">
-        <h3 class="visually-hidden">Мы на карте</h3>
-        <picture>
-          <source media="(min-width: 1150px)" srcset="../img/map-desktop@1x.jpg">
-          <source media="(min-width: 768px)" srcset="../img/map-tablet@1x.jpg">
-          <img class="map__image" src="../img/map-mobile@1x.jpg" alt="Магазин Мишка на карте">
-        </picture>
+        <div class="map_container">
+          <h3 class="visually-hidden">Мы на карте</h3>
+          <div class="map__image-wrapper">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="../img/map-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="../img/map-tablet@1x.jpg">
+              <img class="map__image" src="../img/map-mobile@1x.jpg" alt="Магазин Мишка на карте">
+            </picture>
+          </div>
+        </div>
       </section>
+
       <a class="contacts__button button" href="#">Напишите нам</a>
     </div>
   </section>
