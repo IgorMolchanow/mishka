@@ -4,10 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мишка Магазин</title>
+  <script>
+    document.createElement("picture");
+  </script>
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.css" rel=" stylesheet">
-  <title>Мишка Магазин</title>
+
 </head>
 
 <body>
@@ -221,6 +225,7 @@
               <img class="map__image" src="../img/map-mobile@1x.jpg" alt="Магазин Мишка на карте">
             </picture>
           </div>
+          <div class="map__interactive" id="map"></div>
         </div>
       </section>
 
@@ -258,10 +263,10 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__coopyright coopyright" href="htmlacademy.ru" aria-label="Сайт HTML Academy">
-        <div class="coopyright__container">
-          <span class="coopyright__intro">Разработано</span>
-          <div class="coopyright__logo">
+      <a class="page-footer__copyright copyright" href="htmlacademy.ru" aria-label="Сайт HTML Academy">
+        <div class="copyright__container">
+          <span class="copyright__intro">Разработано</span>
+          <div class="copyright__logo">
             <svg class="copyright__image" width="27" height="34" focusable="false">
               <use xlink:href="#htmlacademy"></use>
             </svg>
@@ -271,6 +276,7 @@
     </div>
   </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=68f07b67-ddf5-4174-9ed5-0eacbbce3524&lang=ru_RU"></script>
 </body>
 
 </html>

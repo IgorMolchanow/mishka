@@ -1,3 +1,44 @@
 .link {
+  position: relative;
+  display: inline-block;
+
   color: $text-base-color;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    color: $text-base-color;
+
+    border-bottom: 1px solid $link-border-color;
+  }
+
+  &:visited {
+    color: $text-base-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-text-color-hover;
+
+    &::after {
+      border-bottom: 1px solid $link-border-color-hover;
+    }
+  }
+
+  &:focus {
+    @include focus-link();
+  }
+
+  &:active {
+    color: rgba($link-text-color-hover, 0.3);
+
+    &::after {
+      border-bottom: 1px solid rgba($link-border-color-hover, 0.1);
+    }
+  }
 }

@@ -1,0 +1,70 @@
+$map-height: 457px;
+
+.map {
+  position: relative;
+  height: $map-height;
+
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.map__container {
+  height: $map-height;
+}
+
+.map__image-wrapper {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: calc(67px + 24px);
+    height: calc(100px + 68px);
+
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+    background-size: 67px 100px;
+    background-position: right top;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.map__image {
+  $map-image-height: 457px;
+  $translateY-var: (($map-image-height - $map-height) / 2);
+
+  display: block;
+  width: $mobile-width;
+  height: $map-image-height;
+  margin: 0 auto;
+
+  transform: translateY(-$translateY-var);
+
+  @include tablet-width() {
+    width: 768px;
+  }
+
+  @include desktop-width() {
+    width: 525px;
+  }
+}
+
+.map__interactive {
+  $interactive-height: $map-height;
+  $translateY-var: (($interactive-height - $map-height) / 2);
+
+  position: relative;
+  left: 50%;
+  top: -$interactive-height;
+  width: 100vw;
+  height: $interactive-height;
+
+  transform: translate(-50%, -$translateY-var);
+
+  @include desktop-width() {
+    width: 100%;
+  }
+}

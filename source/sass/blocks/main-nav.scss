@@ -318,8 +318,58 @@
     }
   }
 }
+.main-nav__link[href]:hover .main-nav__image,
+.main-nav__link[href]:focus .main-nav__image {
+  fill: $cart-icon-color-hover;
+}
+
 .main-nav__list--user-nav .main-nav__link-text {
   margin-right: 0;
+}
+
+.main-nav__link[href]:hover .main-nav__link-text,
+.main-nav__link[href]:focus .main-nav__link-text {
+  opacity: 0.6;
+}
+
+.main-nav__link[href]:focus .main-nav__link-text {
+  @include focus();
+}
+
+.main-nav__list--site-nav .main-nav__link[href]:focus .main-nav__link-text {
+  @include tablet-width() {
+    @include focus($link-border-color-hover, $bg-color-gray);
+  }
+
+  @include desktop-width() {
+    @include focus();
+  }
+}
+
+.main-nav__list--site-nav-index
+  .main-nav__link[href]:focus
+  .main-nav__link-text {
+  @include tablet-width() {
+    @include focus($link-border-color-hover, $bg-color-gray-2);
+  }
+
+  @include desktop-width() {
+    @include focus();
+  }
+}
+
+.main-nav__list--special .main-nav__link[href]:focus .main-nav__link-text {
+  @include desktop-width() {
+    @include focus($link-border-color-hover, $bg-color-gray);
+  }
+}
+
+.main-nav__list--special-index
+  .main-nav__link[href]:focus
+  .main-nav__link-text {
+  @include desktop-width() {
+    @include focus($link-border-color-hover, $bg-color-gray-2);
+  }
 }
 .main-nav__item--search .main-nav__link-text {
   @include tablet-width() {

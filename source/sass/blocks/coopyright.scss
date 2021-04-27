@@ -7,7 +7,7 @@
   outline: none;
 
   &:hover .copyright__image,
-  &:focus .copyright__image {
+  &:focus .coopyright__image {
     fill: $copyright-image-color-hover;
   }
 
@@ -43,7 +43,7 @@
     border: none;
   }
 }
-.coopyright__intro {
+.copyright__intro {
   @include font-options($font-bold, 19px, 18px, $text-title-color);
 
   padding-right: 20px;

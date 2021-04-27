@@ -1,3 +1,6 @@
+.reviews {
+  @include decorative-wavy-border-line();
+}
 .reviews__container {
   @include container($mobile-width, $mobile-padding, 8px, 51px);
   @include tablet-width() {
